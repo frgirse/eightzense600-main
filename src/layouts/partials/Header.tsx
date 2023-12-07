@@ -8,7 +8,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { IoSearch } from "react-icons/io5/index.js";
-import AuthInfo from "../../app/components/navbar/UserMenu";
+import AuthInfo from "../../components/ui/AuthInfo"
+import HelloGreetings from"../../components/ui/Hello";
+import Image from "next/image"
 
 //  child navigation link interface
 export interface IChildNavigationLink {
@@ -18,7 +20,7 @@ export interface IChildNavigationLink {
 
 // navigation link interface
 export interface INavigationLink {
-  name: string;
+  name: string
   url: string;
   hasChildren?: boolean;
   children?: IChildNavigationLink[];
@@ -41,9 +43,11 @@ const Header = () => {
       className={`header z-30 ${settings.sticky_header && "sticky top-0"}`}
     >
       <nav className="navbar container">
-      <AuthInfo/>
+        <HelloGreetings />
         {/* logo */}
-        
+<div className="">
+<Image src="/images/Glaskiesobg.png" width="66" height="66" alt="Logp 8Zense" />
+</div>
         {/* navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
@@ -139,7 +143,6 @@ const Header = () => {
           )}
         </ul>
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-
           <ThemeSwitcher className="mr-5" />
           {navigation_button.enable && (
             <Link
@@ -150,7 +153,6 @@ const Header = () => {
             </Link>
           )}
         </div>
-        
       </nav>
     </header>
   );

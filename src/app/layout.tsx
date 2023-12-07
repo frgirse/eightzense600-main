@@ -19,6 +19,7 @@ export default function RootLayout({
   const sf = theme.fonts.font_family.secondary;
 
   return (
+    <ClerkProvider>
     <html suppressHydrationWarning={true} lang="en">
       <head>
         {/* responsive meta */}
@@ -55,23 +56,16 @@ export default function RootLayout({
           }&display=swap`}
           rel="stylesheet"
         />
-      </head>
-    
-
-    <ClerkProvider>
-                                                                                                                                                                      <body className="bg-[#2A2B2A] bg-[url('/images/gitter.svg')]  bg-repeat"  suppressHydrationWarning={true}>
+      </head>                                                                                                                                                             <body className="bg-[#2A2B2A] bg-[url('/images/gitter.svg')]  bg-repeat"  suppressHydrationWarning={true}>
         <TwSizeIndicator />
-        
         <Providers>
           <Header />
           <main className="">{children}</main>
           <Footer />
         </Providers>
-        
       </body>
-      </ClerkProvider>
     </html>
-
+    </ClerkProvider>
   );
 }
 

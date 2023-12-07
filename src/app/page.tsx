@@ -31,7 +31,7 @@ const Home = () => {
  
  <main className=" h-screen w-full  bg-[url('/images/grid.svg')] bg-repeat bg-[#3c3f40] mb-10 grid grid-cols-[1fr_1fr_1fr] grid-rows-[85vh_20vh_20vh_50vh] md:grid-cols-5 md:grid-rows-[89vh_20vh_45vh_60vh_50vh] lg:grid-cols-8 lg:grid-rows-[25vh_60vh_45vh_25vh_50vh] xl:grid-cols-12 xl:grid-row-[25vh_66vh_30vh_25vh_25vh] gap-3">
  <section className="col-start-1 col-end-4 row-start-1 row-end-2 md:col-start-1 md:col-end-4  md:row-start-1 md:row-end-2  md:h-auto lg:w-full lg:col-start-1 lg:col-end-13">
-      <div className="-mt-36  bg-[url('/images/sideboardobg.png')] bg-[length:66% 66%] bg-no-repeat bg-bottom grid gap-y-1 grid-cols-[1fr_1fr_1fr] grid-rows-[34vh_18vh_4vh_10vh] md:grid-cols-[26vw_20vw_20vw_20vw_20vw] md:grid-rows-[24vw_38vh_33vh_20vh]">
+      <div className="  bg-[url('/images/sideboardobg.png')] bg-[length:66% 66%] bg-no-repeat bg-bottom grid gap-y-1 grid-cols-[1fr_1fr_1fr] grid-rows-[34vh_18vh_4vh_10vh] md:grid-cols-[26vw_20vw_20vw_20vw_20vw] md:grid-rows-[24vw_38vh_33vh_20vh]">
           <div className="p-3 col-start-1 col-end-4 row-start-1 row-end-2  md:bg-gradient-to-b from-blue-300/30 to blue-600 md:col-start-1 md:col-end-6 md:row-start-1 md:row-end-2">
           <p className=" py-2 px-2 text-5xl uppercase  md:mb-10 md:w-8/12 md:py-6 md:text-[5rem] leading-9 font-bold text-stone-100 lg:px-7 lg:mt-7 lg:leading-7 lg:text-[5rem]">Timeless</p>
           <p className="px-2 uppercase leading-6 text-7xl  md:text-[9rem] font-extrabold text-[#d8cdab] lg:text-[13rem] mt-3">Design</p>
@@ -42,11 +42,7 @@ const Home = () => {
                           dangerouslySetInnerHTML={markdownify(banner.content ?? "")}/>
                    <p className="py-1 relative -top-7 mt-2 font-phudu lg:mt-3 lg:ml-5 text-[.59rem] w-9 h-9 bg-orange-500 leading-3 shadow-xl shadow-gray-500 rounded-full text-center font-medium font-phudu text-white md:w-12 lg:w-24 lg:text-xs">carl sagan</p>
            </div>
-
-     
-        
-
-      <div className=" flex justify-center col-start-2 col-end-3 row-start-4 row-end-5 md:col-start-2 md:col-end-4 md:row-start-4 md-row-end-5 md:text-[3rem] " >
+      <div className=" flex justify-center col-start-2 col-end-3 row-start-3 row-end-5 md:col-start-2 md:col-end-4 md:row-start-4 md-row-end-5 md:text-[3rem] " >
 {banner.button!.enable && (
           <a className="mt-5 bg-amber-500 rounded-xl btn btn-primary text-center w-36 h-10 text-1xl md:text-2xl" href={banner.button!.link}>
             {banner.button!.label}
